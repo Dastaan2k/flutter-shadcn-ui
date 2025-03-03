@@ -61,7 +61,7 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 15.rem,
+      fontSize: 1.5.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w600,
