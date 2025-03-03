@@ -143,7 +143,7 @@ class ShadThemeData extends ShadBaseTheme {
       ),
     );
 
-    final effectiveDisableSecondaryBorder = disableSecondaryBorder ?? false;
+    final effectiveDisableSecondaryBorder = disableSecondaryBorder ?? true;
 
     final effectiveVariant = variant ??
         switch (effectiveDisableSecondaryBorder) {

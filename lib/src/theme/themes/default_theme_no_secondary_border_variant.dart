@@ -330,6 +330,7 @@ class ShadDefaultThemeNoSecondaryBorderVariant extends ShadThemeVariant {
       lead: ShadTextDefaultTheme.lead(family: kDefaultFontFamily),
       large: ShadTextDefaultTheme.large(family: kDefaultFontFamily),
       small: ShadTextDefaultTheme.small(family: kDefaultFontFamily),
+      extraSmall: ShadTextDefaultTheme.extraSmall(family: kDefaultFontFamily),
       muted: ShadTextDefaultTheme.muted(family: kDefaultFontFamily),
       family: kDefaultFontFamily,
     );
@@ -438,8 +439,14 @@ class ShadDefaultThemeNoSecondaryBorderVariant extends ShadThemeVariant {
       inputPadding: EdgeInsets.zero,
       decoration: ShadDecoration(
         border: ShadBorder.all(
-          width: 1,
+          width: 0.667,
           color: colorScheme.border,
+          radius: radius,
+          padding: const EdgeInsets.all(1),
+        ),
+        focusedBorder: ShadBorder.all(
+          width: 1,
+          color: colorScheme.foreground,
           radius: radius,
           padding: const EdgeInsets.all(1),
         ),

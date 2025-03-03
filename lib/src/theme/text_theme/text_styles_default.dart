@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:shadcn_ui/extensions/css_double_extension.dart';
 
 const kDefaultFontFamily = 'packages/shadcn_ui/Geist';
 const kDefaultFontFamilyMono = 'packages/shadcn_ui/GeistMono';
@@ -26,7 +27,7 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 36,
+      fontSize: 2.25.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w800,
@@ -43,7 +44,7 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 30,
+      fontSize: 1.875.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w600,
@@ -60,7 +61,7 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 24,
+      fontSize: 15.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w600,
@@ -77,7 +78,7 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 20,
+      fontSize: 1.25.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w600,
@@ -94,7 +95,7 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 16,
+      fontSize: 1.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w400,
@@ -111,7 +112,7 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 16,
+      fontSize: 1.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.italic,
       fontWeight: FontWeight.w400,
@@ -128,7 +129,7 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 16,
+      fontSize: 1.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w700,
@@ -145,7 +146,7 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 16,
+      fontSize: 1.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w400,
@@ -162,7 +163,7 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 20,
+      fontSize: 1.25.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w400,
@@ -179,7 +180,7 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 18,
+      fontSize: 1.125.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w600,
@@ -196,10 +197,27 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 14,
+      fontSize: .875.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.normal,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w400,
+      height: 14 / 14,
+      letterSpacing: 0,
+      fontFamily: family,
+      textBaseline: TextBaseline.alphabetic,
+      leadingDistribution: TextLeadingDistribution.even,
+    );
+  }
+
+  static TextStyle extraSmall({
+    required String family,
+  }) {
+    return TextStyle(
+      inherit: false,
+      fontSize: .75.rem,
+      decoration: TextDecoration.none,
+      fontStyle: FontStyle.normal,
+      fontWeight: FontWeight.w400,
       height: 14 / 14,
       letterSpacing: 0,
       fontFamily: family,
@@ -213,7 +231,7 @@ abstract class ShadTextDefaultTheme {
   }) {
     return TextStyle(
       inherit: false,
-      fontSize: 14,
+      fontSize: .875.rem,
       decoration: TextDecoration.none,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.w400,

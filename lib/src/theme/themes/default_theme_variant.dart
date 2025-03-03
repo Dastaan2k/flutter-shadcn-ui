@@ -313,6 +313,7 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
       lead: ShadTextDefaultTheme.lead(family: kDefaultFontFamily),
       large: ShadTextDefaultTheme.large(family: kDefaultFontFamily),
       small: ShadTextDefaultTheme.small(family: kDefaultFontFamily),
+      extraSmall: ShadTextDefaultTheme.extraSmall(family: kDefaultFontFamily),
       muted: ShadTextDefaultTheme.muted(family: kDefaultFontFamily),
       family: kDefaultFontFamily,
     );

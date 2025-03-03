@@ -189,6 +189,7 @@ class ShadTextTheme {
     TextStyle? lead,
     TextStyle? large,
     TextStyle? small,
+    TextStyle? extraSmall,
     TextStyle? muted,
     String? family,
     String? package,
@@ -213,6 +214,7 @@ class ShadTextTheme {
       lead: lead ?? ShadTextDefaultTheme.lead(family: effectiveFamily),
       large: large ?? ShadTextDefaultTheme.large(family: effectiveFamily),
       small: small ?? ShadTextDefaultTheme.small(family: effectiveFamily),
+      extraSmall: extraSmall ?? ShadTextDefaultTheme.extraSmall(family: effectiveFamily),
       muted: muted ?? ShadTextDefaultTheme.muted(family: effectiveFamily),
       family: effectiveFamily,
       googleFontBuilder: googleFontBuilder,
@@ -233,6 +235,7 @@ class ShadTextTheme {
     required this.lead,
     required this.large,
     required this.small,
+    required this.extraSmall,
     required this.muted,
     required this.family,
     this.googleFontBuilder,
@@ -293,6 +296,10 @@ class ShadTextTheme {
         builder: fontBuilder,
       ),
       small: GoogleFontTextStyle(
+        effectiveTextTheme.small.omitFamilyAndPackage,
+        builder: fontBuilder,
+      ),
+      extraSmall: GoogleFontTextStyle(
         effectiveTextTheme.small.omitFamilyAndPackage,
         builder: fontBuilder,
       ),
@@ -414,6 +421,7 @@ class ShadTextTheme {
   final TextStyle lead;
   final TextStyle large;
   final TextStyle small;
+  final TextStyle extraSmall;
   final TextStyle muted;
 
   /// The font family of the theme.
@@ -460,6 +468,7 @@ class ShadTextTheme {
       lead: lead ?? this.lead,
       large: large ?? this.large,
       small: small ?? this.small,
+      extraSmall: extraSmall ?? this.extraSmall,
       muted: muted ?? this.muted,
       family: effectiveFamily,
       googleFontBuilder: googleFontBuilder ?? this.googleFontBuilder,
@@ -637,6 +646,17 @@ class ShadTextTheme {
         decorationStyle: decorationStyle,
         color: bodyColor,
       ),
+      extraSmall: small.apply(
+        fontFamily: effectiveFamily,
+        fontFamilyFallback: fontFamilyFallback,
+        package: package,
+        fontSizeFactor: fontSizeFactor,
+        fontSizeDelta: fontSizeDelta,
+        decoration: decoration,
+        decorationColor: decorationColor,
+        decorationStyle: decorationStyle,
+        color: bodyColor,
+      ),
       muted: muted.apply(
         fontFamily: effectiveFamily,
         fontFamilyFallback: fontFamilyFallback,
@@ -673,6 +693,7 @@ class ShadTextTheme {
       lead: TextStyle.lerp(a.lead, b.lead, t)!,
       large: TextStyle.lerp(a.large, b.large, t)!,
       small: TextStyle.lerp(a.small, b.small, t)!,
+      extraSmall: TextStyle.lerp(a.extraSmall, b.extraSmall, t)!,
       muted: TextStyle.lerp(a.muted, b.muted, t)!,
       family: t < 0.5 ? a.family : b.family,
       googleFontBuilder: t < 0.5 ? a.googleFontBuilder : b.googleFontBuilder,
@@ -700,6 +721,7 @@ class ShadTextTheme {
         other.lead == lead &&
         other.large == large &&
         other.small == small &&
+        other.extraSmall == extraSmall &&
         other.muted == muted &&
         other.family == family &&
         other.googleFontBuilder == googleFontBuilder;
@@ -720,6 +742,7 @@ class ShadTextTheme {
       lead,
       large,
       small,
+      extraSmall,
       muted,
       family,
       merge,
