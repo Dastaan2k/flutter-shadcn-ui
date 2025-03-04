@@ -862,7 +862,7 @@ class _ShadButtonState extends State<ShadButton> {
     }
     return defaultHeightForSize(
       theme,
-      buttonTheme(theme).size ?? ShadButtonSize.regular,
+      buttonTheme(theme).size ?? ShadButtonSize.sm,
     );
   }
 
@@ -1065,6 +1065,7 @@ class _ShadButtonState extends State<ShadButton> {
                   theme,
                   hovered: hovered,
                 ),
+                fontWeight: FontWeight.w500,
                 decorationColor: foreground(theme),
                 decorationStyle: TextDecorationStyle.solid,
               ),

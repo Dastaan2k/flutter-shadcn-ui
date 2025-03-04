@@ -4,6 +4,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
+import 'package:shadcn_ui/extensions/css_double_extension.dart';
 import 'package:shadcn_ui/src/components/button.dart';
 import 'package:shadcn_ui/src/raw_components/portal.dart';
 import 'package:shadcn_ui/src/theme/color_scheme/base.dart';
@@ -107,8 +108,8 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
       decoration: ShadDecoration(
         border: ShadBorder.all(
           radius: radius,
-          color: colorScheme.input,
-          width: 1,
+          color: colorScheme.border,
+          width: 0.6667,
         ),
       ),
       gap: 8,
@@ -142,22 +143,22 @@ class ShadDefaultThemeVariant extends ShadThemeVariant {
 
   @override
   ShadButtonSizesTheme buttonSizesTheme() {
-    return const ShadButtonSizesTheme(
+    return ShadButtonSizesTheme(
       regular: ShadButtonSizeTheme(
-        height: 40,
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+        height: 36,
+        padding: EdgeInsets.symmetric(horizontal: 1.rem, vertical: 0.5.rem),
       ),
-      sm: ShadButtonSizeTheme(
+      sm: const ShadButtonSizeTheme(
         height: 36,
         padding: EdgeInsets.symmetric(horizontal: 12),
       ),
-      lg: ShadButtonSizeTheme(
+      lg: const ShadButtonSizeTheme(
         height: 44,
         padding: EdgeInsets.symmetric(horizontal: 32, vertical: 8),
       ),
-      icon: ShadButtonSizeTheme(
-        height: 40,
-        width: 40,
+      icon: const ShadButtonSizeTheme(
+        height: 36,
+        width: 36,
         padding: EdgeInsets.zero,
       ),
     );

@@ -96,7 +96,7 @@ class ShadThemeData extends ShadBaseTheme {
     ShadSeparatorTheme? separatorTheme,
   }) {
     final effectiveRadius =
-        radius ?? const BorderRadius.all(Radius.circular(6));
+        radius ??  BorderRadius.circular(6);
 
     var effectiveTextTheme =
         ShadDefaultThemeVariant.defaultTextTheme.mergeWith(textTheme);
